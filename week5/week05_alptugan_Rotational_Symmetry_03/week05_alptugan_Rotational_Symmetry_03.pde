@@ -15,8 +15,8 @@ void setup() {
   y = 0;
   circularRad = 200;
   
-  rw = 200;
-  rh = 200;
+  rw = 60;
+  rh = 660;
 }
 
 void draw() {
@@ -28,7 +28,8 @@ void draw() {
   
   // Move everthing in the forloop to center
   translate(width/2, height/2);
-  
+  scale(sin(millis()*0.0005));
+  rotate(radians(millis() * 0.04));
   // calculate angle per circle
   angle = 360 / numItem;
   for(int i = 0; i < numItem; i = i + 1) {
@@ -53,8 +54,9 @@ void draw() {
     rect(-rw*0.5,-rh*0.5, rw, rh);
     popMatrix();
     
-    fill(#ffcc00);
-    circle(x,y,30);
+    //fill(#ffcc00);
+    
+    circle(x,y,20);
   }
   popMatrix();
 }

@@ -13,5 +13,13 @@ void setup() {
 void draw() {
   background(102);
 
-  image(img, 0, 0, 800, 800 * ratio);
+  //image(img, 0, 0, 800, 800 * ratio);
+  
+  pushMatrix();
+  scale(0.7,0.7);
+  image(img, 0, 0);
+  
+  popMatrix();
+  image(img, 0, 400);
+  
 }

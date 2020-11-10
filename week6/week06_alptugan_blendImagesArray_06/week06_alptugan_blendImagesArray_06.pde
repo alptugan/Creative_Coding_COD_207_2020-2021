@@ -16,7 +16,14 @@ void draw() {
   background(0);
 
   for (int i = 0; i < images.length; i++) {
-    blendMode(EXCLUSION);
+    if(i == 0) {
+      blendMode(SCREEN);
+    }else if(i == 1){
+      blendMode(LIGHTEST);
+    }else if(i == 2) {
+      //blendMode(SUBTRACT);
+    }
+    
     image(images[i], 0, 0, width, height);
   }
 }
