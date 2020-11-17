@@ -10,6 +10,8 @@ float z;
 float rConstant;
 
 float theLastRecTime;
+                    // 0    ,   1   ,   2
+color [] colorArr = {#00FF00,#FF0000, #0000FF};
 
 void setup() {
   surface.setLocation(0, 0);
