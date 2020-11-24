@@ -40,9 +40,10 @@ void draw()
   background(0);
 
     
-  // buffer value
-  float bufLeft = abs(player.left.get(1000)* 10);
+  // buffer value -1, 1 
+  float bufLeft = abs(player.left.get(1000) * 10);
   float bufRectRight = abs(player.right.get(100)* 1000);
+  
   strokeWeight(bufLeft);
   
   stroke(0,200,0);

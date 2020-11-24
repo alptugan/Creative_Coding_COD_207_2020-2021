@@ -39,17 +39,24 @@ void setup()
 
 void draw()
 {
-  //background(0);
+  background(0);
   
-  fill(0,0,0,10);
-  rect(0,0,width,height);
+  //fill(0,0,0,10);
+  //rect(0,0,width,height);
     
   // buffer value
   float bufLeft = abs(player.left.get(1000) * 10);
   float bufRectRight = abs(player.right.get(100) * 1000);
   
   
-  if(bufLeft > 0.7) {
+  for(int i = 0; i < player.bufferSize(); i = i + 1) {
+    float freqBand = abs(player.right.get(i) * 1000);
+    fill(255,255,255,255);
+    noStroke();
+    circle(width*0.5, height*0.5,freqBand);
+  }
+  
+  /*if(bufLeft > 0.7) {
     strokeWeight(1);
     stroke(255,0,0);
     for(int i = 0; i < 40; i = i + 1) {
@@ -66,7 +73,7 @@ void draw()
   stroke(150,200,0);
   noFill();
   rect(width * 0.5 - bufRectRight * 0.5, height *0.5  - bufRectRight * 0.5, bufRectRight, bufRectRight );
-  
+  */
   
   
 }

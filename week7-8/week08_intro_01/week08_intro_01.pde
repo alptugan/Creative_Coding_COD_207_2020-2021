@@ -1,8 +1,10 @@
 float x;
 float y;
-float xC;
 float rSize;
+
 float counter;
+float xC;
+float mappedMx;
 
 void setup() {
   // set window position
@@ -21,17 +23,17 @@ void draw() {
   // set bg color
   background(255,255,255,255);
   
+  mappedMx = map(mouseX, 0, 1080, 0, 0.1);
+  
   // update the value of counter
-  counter = counter + 0.001;
+  counter = counter + mappedMx;
   
   // -1,1 
   // will -1080, 1080
-  // we want to map the output value: 0 - 1080
+  // we want to map the output value between: 0 - 1080
   x = sin(counter) * width;
   
-  // map the input value 
-  // 0 - 1080
-  xC = map(x, -width, width, 0, width);
+  xC = map(x, -1080, 1080, 100, 1080 - 100);
   
   noStroke();
   fill(0);

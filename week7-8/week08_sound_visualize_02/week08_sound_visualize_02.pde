@@ -54,8 +54,8 @@ void draw()
   {
     text("Press any key to start playback.", 10, 20 );
   }
-  
 }
+
 void keyPressed()
 {
   if ( player.isPlaying() )
