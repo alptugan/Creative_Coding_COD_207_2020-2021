@@ -19,6 +19,8 @@ void setup()
   // this means you can find files that are in the data folder and the 
   // sketch folder. you can also pass an absolute path, or a URL.
   player = minim.loadFile("/Users/alptugan/oF/assets/loop2-120bpm.wav");
+  
+  println(player.bufferSize());
 }
 
 void draw()

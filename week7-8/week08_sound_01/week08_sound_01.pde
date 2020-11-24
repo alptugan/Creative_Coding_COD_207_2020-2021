@@ -10,7 +10,7 @@ AudioPlayer player;
 void setup()
 {
   surface.setLocation(100,100);
-  size(800, 800);
+  size(800, 800); 
   
   // we pass this to Minim so that it can load files from the data directory
   minim = new Minim(this);
@@ -26,7 +26,7 @@ void draw()
   background(0);
   stroke(255);
   
-  if ( player.isPlaying() )
+  if ( player.isPlaying() == true )
   {
     text("Press any key to pause playback.", 10, 20 );
   }
@@ -38,7 +38,7 @@ void draw()
 }
 void keyPressed()
 {
-  if ( player.isPlaying() )
+  if ( player.isPlaying() == true)
   {
     player.pause();
   }
