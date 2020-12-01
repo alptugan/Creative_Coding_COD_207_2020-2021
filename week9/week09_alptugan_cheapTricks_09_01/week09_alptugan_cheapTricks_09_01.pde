@@ -11,7 +11,7 @@ void setup() {
   mapThck = 1;
 }
 void draw() {
-  
+  //background(0);
   fill(0, 12);
   rectMode(CORNER);
   noStroke();
@@ -25,12 +25,15 @@ void draw() {
      dir = dir * -1; 
   }
   
+  mapThck = map(angle, 0, radians(360), 10,1);
   strokeWeight(mapThck);
   
   pushMatrix();
   rectMode(CENTER);
   translate(width*0.5, height*0.5); 
   rotate(angle);
+  rect(0,0, 60 + angle * 150, 60 + angle * 150);
+  rotate(-angle*2);
   rect(0,0, 60 + angle * 100, 60 + angle * 100);
   popMatrix();
 }
