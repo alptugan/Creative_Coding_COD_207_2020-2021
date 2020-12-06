@@ -65,7 +65,12 @@ void draw() {
 }
 
 void generateGrid(float x, float y, float gridSize) {
-
+  
+  // You can limit the randomness into 0 - 1 and
+  // generate more precise visuals.
+  // Also it's possible to add more rules to create much similar
+  // compositions as Sol LeWitt's style.
+  // It depends on your curiosity 
   float chanceFac = random(17);
 
   if (chanceFac <= 1) {
